@@ -11,4 +11,4 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     command: >
-      bash -c "conda run -n mood-env streamlit run app/main.py"
+      bash -c "conda run -n music-rec-app-env streamlit run app/main.py --server.port=8501 --server.address=0.0.0.0"

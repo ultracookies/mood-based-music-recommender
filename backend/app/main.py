@@ -1,6 +1,6 @@
 import streamlit as st
-from app.recommend import get_recommendations
-from app.mood_analysis import analyze_text_mood
+from recommend import get_recommendations
+from mood_analysis import analyze_text_mood
 
 # --- Streamlit UI ---
 

@@ -1,4 +1,4 @@
-name: myenv
+name: music-rec-app-env
 channels:
   - defaults
   - conda-forge
@@ -7,6 +7,8 @@ dependencies:
   - numpy
   - pandas
   - scikit-learn
+  - textblob
   - pip
   - pip:
       - streamlit
+      - spotipy
