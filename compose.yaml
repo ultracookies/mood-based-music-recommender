@@ -1,0 +1,14 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: mood-music-container-backend
+    ports:
+      - "8501:8501" # Change to "5000:5000" if using Flask
+    volumes:
+      - ./backend:/app
+    working_dir: /app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: >
+      bash -c "conda run -n mood-env streamlit run app/main.py"
