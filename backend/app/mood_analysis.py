@@ -1,12 +1,4 @@
-from textblob import TextBlob
+from utils.sentiment_classif_utils import query_sentiment
 
 def analyze_text_mood(text):
-    polarity = TextBlob(text).sentiment.polarity
-    if polarity > 0.5:
-        return "Happy"
-    elif polarity > 0.1:
-        return "Calm"
-    elif polarity < -0.3:
-        return "Sad"
-    else:
-        return "Focus"
+    return query_sentiment(text)[0]['label']

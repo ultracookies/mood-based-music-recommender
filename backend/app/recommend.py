@@ -11,3 +11,7 @@ def get_recommendations(mood):
         "artist": "Mock Artist",
         "url": "https://open.spotify.com/track/mockid"
     }]
+
+
+def get_suggestions(mood):
+    pass

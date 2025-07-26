@@ -16,5 +16,7 @@ COPY . .
 # Optional: Activate environment and test
 RUN conda run -n music-rec-app-env python --version
 
+RUN python -c "from transformers import pipeline; pipeline('text-classification', model='nateraw/bert-base-uncased-emotion')"
+
 # Default command will be overridden by docker-compose
 CMD ["streamlit", "run", "app/main.py"]
