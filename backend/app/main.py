@@ -28,6 +28,7 @@ if custom_mood_text:
 if st.button("Get Recommendations"):
     with st.spinner("Finding tracks that match your vibe..."):
         tracks = get_recommendations(mood)
+        print(tracks)
         
         if not tracks:
             st.warning("No tracks found. Try a different mood.")
