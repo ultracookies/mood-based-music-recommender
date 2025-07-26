@@ -1,6 +1,11 @@
+from re import search
 import streamlit as st
 from recommend import get_recommendations
 from mood_analysis import analyze_text_mood
+
+from spotify_utils import search
+
+search(search='weeknd', limit=10)
 
 # --- Streamlit UI ---
 

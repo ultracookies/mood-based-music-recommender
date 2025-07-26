@@ -2,6 +2,8 @@ services:
   backend:
     build:
       context: ./backend
+    env_file:
+      - .env
     container_name: mood-music-container-backend
     ports:
       - "8501:8501" # Change to "5000:5000" if using Flask
@@ -11,4 +13,4 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
     command: >
-      bash -c "conda run -n music-rec-app-env streamlit run app/main.py --server.port=8501 --server.address=0.0.0.0"
+      bash -c "conda run --no-capture-output -n music-rec-app-env streamlit run app/main.py --server.port=8501 --server.address=0.0.0.0"

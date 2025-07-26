@@ -8,7 +8,7 @@ COPY environment.yml .
 RUN conda env create -f environment.yml
 
 # Activate conda env and make sure it works in subprocesses
-SHELL ["conda", "run", "-n", "music-rec-app-env", "/bin/bash", "-c"]
+SHELL ["conda", "run", "--no-capture-output", "-n", "music-rec-app-env", "/bin/bash", "-c"]
 
 # Copy project files
 COPY . .

@@ -12,3 +12,4 @@ dependencies:
   - pip:
       - streamlit
       - spotipy
+      - python-dotenv
